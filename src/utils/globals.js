@@ -16,6 +16,11 @@ export const clearElement = (el) => (el.innerHTML = "");
 // Toggles the "hidden" class of an element
 export const toggleHidden = (el) => el?.classList.toggle("hidden");
 
+// --- Template Tag section ---
+// Tag function for syntax highlighting with lit-html extension
+export const html = (strings, ...values) =>
+  String.raw({ raw: strings }, ...values);
+
 // --- Rendering Core section ---
 // Root app container
 export const app = $("#app");

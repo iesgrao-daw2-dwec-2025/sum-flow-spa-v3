@@ -3,6 +3,7 @@ import {
   $,
   render,
   template,
+  html,
   KEY,
   randInt,
   clearElement,

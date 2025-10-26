@@ -1,5 +1,5 @@
 // --- Globals ---
-import { $, render, template, KEY } from "../utils/globals.js";
+import { $, render, template, html, KEY } from "../utils/globals.js";
 
 // --- Imported views ---
 import { viewDashboard } from "./viewDashboard.js";
