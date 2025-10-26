@@ -10,13 +10,13 @@ export function viewSummary() {
   const vals = JSON.parse(localStorage.getItem(KEY) || "[]");
   const sum = vals.reduce((a, b) => a + b, 0);
 
-  template(`
+  template(html`
     <h1>Resumen</h1>
-    <p>${
-      vals.length > 0
+    <p>
+      ${vals.length > 0
         ? `Resultado: ${vals.join(" + ")} = ${sum}`
-        : "No hay datos disponibles."
-    }</p>
+        : "No hay datos disponibles."}
+    </p>
     <div>
       <button id="btnBack">Volver</button>
       <button id="btnExit">Salir</button>

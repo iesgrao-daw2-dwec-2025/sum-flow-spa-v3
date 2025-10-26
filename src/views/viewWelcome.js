@@ -6,7 +6,7 @@ import { viewLogin } from "./viewLogin.js";
 
 // --- View definition ---
 export function viewWelcome() {
-  template(`
+  template(html`
     <h1>Aplicación Sum Flow (SPA Modular con globals.js)</h1>
     <p>Bienvenido/a. Pulsa para continuar al login.</p>
     <button id="btnStart">Continuar</button>

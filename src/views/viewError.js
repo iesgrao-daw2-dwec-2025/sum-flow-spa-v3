@@ -6,7 +6,7 @@ import { viewLogin } from "./viewLogin.js";
 
 // --- View definition ---
 export function viewError() {
-  template(`
+  template(html`
     <h1>Acceso denegado</h1>
     <p>Los datos de acceso son incorrectos.</p>
     <button id="btnRetry">Volver al login</button>

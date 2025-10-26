@@ -8,10 +8,15 @@ import { viewWelcome } from "./viewWelcome.js";
 
 // --- View definition ---
 export function viewLogin() {
-  template(`
+  template(html`
     <h1>Acceso</h1>
     <input id="user" placeholder="Usuario" autocomplete="username" />
-    <input id="pass" type="password" placeholder="Contraseña" autocomplete="current-password" />
+    <input
+      id="pass"
+      type="password"
+      placeholder="Contraseña"
+      autocomplete="current-password"
+    />
     <button id="btnHome">Volver al inicio</button>
     <button id="btnLogin">Iniciar sesión</button>
   `);

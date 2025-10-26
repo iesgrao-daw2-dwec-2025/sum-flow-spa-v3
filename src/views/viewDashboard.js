@@ -15,7 +15,7 @@ import { viewLogin } from "./viewLogin.js";
 
 // --- View definition ---
 export function viewDashboard() {
-  template(`
+  template(html`
     <h1>Panel principal</h1>
     <input id="numItems" type="number" min="1" placeholder="Número de ítems" />
     <div>
@@ -23,7 +23,8 @@ export function viewDashboard() {
       <button id="btnToggleInstructions">Mostrar instrucciones</button>
     </div>
     <p id="instructions" class="notice hidden">
-      Introduce un número y genera ítems. Cada ítem muestra un número aleatorio entre 0 y 100.
+      Introduce un número y genera ítems. Cada ítem muestra un número aleatorio
+      entre 0 y 100.
     </p>
     <div id="items"></div>
     <div>
