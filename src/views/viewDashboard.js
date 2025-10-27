@@ -13,6 +13,7 @@ import {
 // --- Imported views ---
 import { viewSummary } from "./viewSummary.js";
 import { viewLogin } from "./viewLogin.js";
+import { PepeTureatca } from "./pepeTureatca.js";
 
 // --- View definition ---
 export function viewDashboard() {
@@ -23,6 +24,11 @@ export function viewDashboard() {
       <button id="btnGenerate">Generar</button>
       <button id="btnToggleInstructions">Mostrar instrucciones</button>
     </div>
+
+    <div>
+      <button id="vistaPepe">Vista Pepe</button>
+    </div>
+
     <p id="instructions" class="notice hidden">
       Introduce un número y genera ítems. Cada ítem muestra un número aleatorio
       entre 0 y 100.
@@ -64,4 +70,6 @@ export function viewDashboard() {
     localStorage.removeItem(KEY);
     render(viewLogin);
   });
+  
+  $("#vistaPepe")?.addEventListener("click", () => render(PepeTureatca));
 }
