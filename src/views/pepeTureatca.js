@@ -1,7 +1,6 @@
 import { template, html } from "../utils/globals.js";
 
 export function PepeTureatca() {
-  // Estructura HTML
   template(html`
     <h1>Vista Pepe — Tablas de multiplicar</h1>
 
