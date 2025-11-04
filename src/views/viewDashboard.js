@@ -13,6 +13,7 @@ import {
 // --- Imported views ---
 import { viewSummary } from "./viewSummary.js";
 import { viewLogin } from "./viewLogin.js";
+import { viewSebas } from "./viewSebas.js";
 
 // --- View definition ---
 export function viewDashboard() {
@@ -23,10 +24,13 @@ export function viewDashboard() {
       <button id="btnGenerate">Generar</button>
       <button id="btnToggleInstructions">Mostrar instrucciones</button>
     </div>
+
     <p id="instructions" class="notice hidden">
       Introduce un número y genera ítems. Cada ítem muestra un número aleatorio
       entre 0 y 100.
+      <button id="sebas">Sebas</button>
     </p>
+
     <div id="items"></div>
     <div>
       <button id="btnContinue">Sumar</button>
@@ -64,4 +68,6 @@ export function viewDashboard() {
     localStorage.removeItem(KEY);
     render(viewLogin);
   });
+
+  $("#sebas")?.addEventListener("click", () => render(viewSebas));
 }

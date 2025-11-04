@@ -23,13 +23,13 @@ export const html = (strings, ...values) =>
 
 // --- Rendering Core section ---
 // Root app container
-export const app = $("#app");
+const getApp = () => $("#app");
 
 // Renders HTML content into the root app container
-export const template = (html) => (app.innerHTML = html);
+export const template = (html) => (getApp().innerHTML = html);
 
 // Main render function (used by all views)
 export function render(viewFn) {
-  clearElement(app);
+  clearElement(getApp());
   viewFn();
 }
