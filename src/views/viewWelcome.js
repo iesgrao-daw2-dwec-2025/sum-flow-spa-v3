@@ -17,7 +17,6 @@ export function viewWelcome() {
 
   $("#btnStart")?.addEventListener("click", () => render(viewLogin));
 
- // Nuevo botón comunicado con marc.js
   $("#btnMarc")?.addEventListener("click", () => { accionMarc(); 
   });
 }
