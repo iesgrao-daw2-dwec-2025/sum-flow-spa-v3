@@ -5,6 +5,7 @@ import { $, render, template, html } from "../utils/globals.js";
 import { viewDashboard } from "./viewDashboard.js";
 import { viewError } from "./viewError.js";
 import { viewWelcome } from "./viewWelcome.js";
+import { viewDiegoMonreal } from "./viewDiegoMonreal.js";
 
 // --- View definition ---
 export function viewLogin() {
@@ -19,6 +20,7 @@ export function viewLogin() {
     />
     <button id="btnHome">Volver al inicio</button>
     <button id="btnLogin">Iniciar sesión</button>
+    <button id="btnDiegoMonreal">Vista Diego</button>
   `);
 
   $("#btnLogin")?.addEventListener("click", () => {
@@ -29,4 +31,8 @@ export function viewLogin() {
   });
 
   $("#btnHome")?.addEventListener("click", () => render(viewWelcome));
+
+  $("#btnDiegoMonreal")?.addEventListener("click", () =>
+    render(viewDiegoMonreal)
+  );
 }
