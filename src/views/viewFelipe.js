@@ -6,7 +6,6 @@ import {viewLogin} from "./viewLogin.js";
 export function viewFelipe(){
 
     template (html `
-        
         <h1>Vista de Felipe</h1>
         <hr>
         <p>Instrucciones:  Tendrás que insertar un texto y un numero, después de ello le tendrás que pulsar al boton de iniciar.</p>
@@ -47,8 +46,8 @@ export function viewFelipe(){
             temp += `${i + 1}. ${text} \n`;
         }
         result.innerText = temp;
-
     })
+
 
     $("#btnVolver")?.addEventListener("click", () => render(viewDashboard));
     $("#btnLogOut")?.addEventListener("click", () => {
