@@ -13,7 +13,8 @@ import {
 // --- Imported views ---
 import { viewSummary } from "./viewSummary.js";
 import { viewLogin } from "./viewLogin.js";
-import { viewPepeTureatca } from "./viewPepeTureatca.js";
+import {viewFelipe} from "./viewFelipe.js";
+
 
 // --- View definition ---
 export function viewDashboard() {
@@ -23,10 +24,7 @@ export function viewDashboard() {
     <div>
       <button id="btnGenerate">Generar</button>
       <button id="btnToggleInstructions">Mostrar instrucciones</button>
-    </div>
-
-    <div>
-      <button id="btnViewPepe">Vista Pepe</button>
+      <button id="btnViewFelipe" style="background-color:yellow;">Vista Felipe</button>
     </div>
 
     <p id="instructions" class="notice hidden">
@@ -71,5 +69,5 @@ export function viewDashboard() {
     render(viewLogin);
   });
   
-  $("#btnViewPepe")?.addEventListener("click", () => render(viewPepeTureatca));
+  $("#btnViewFelipe")?.addEventListener("click", () => render(viewFelipe));
 }
