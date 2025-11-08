@@ -7,16 +7,17 @@ import {
   KEY,
   randInt,
   clearElement,
-  toggleHidden,
-} from "../utils/globals.js";
+  toggleHidden
+} from '../utils/globals.js'
 
 // --- Imported views ---
-import { viewSummary } from "./viewSummary.js";
-import { viewLogin } from "./viewLogin.js";
-import { viewPepeTureatca } from "./viewPepeTureatca.js";
+import { viewSummary } from './viewSummary.js'
+import { viewLogin } from './viewLogin.js'
+import { viewPepeTureatca } from './viewPepeTureatca.js'
+import{viewGaryEspinoza} from './viewGaryEspinoza.js'
 
 // --- View definition ---
-export function viewDashboard() {
+export function viewDashboard () {
   template(html`
     <h1>Panel principal</h1>
     <input id="numItems" type="number" min="1" placeholder="Número de ítems" />
@@ -29,6 +30,10 @@ export function viewDashboard() {
       <button id="btnViewPepe">Vista Pepe</button>
     </div>
 
+    <div>
+      <button id="btnViewGary">Vista Gary </button>
+    </div>
+
     <p id="instructions" class="notice hidden">
       Introduce un número y genera ítems. Cada ítem muestra un número aleatorio
       entre 0 y 100.
@@ -38,38 +43,41 @@ export function viewDashboard() {
       <button id="btnContinue">Sumar</button>
       <button id="btnExit">Salir</button>
     </div>
-  `);
+  `)
 
-  const itemsDiv = $("#items");
-  const num = $("#numItems");
-  const instructions = $("#instructions");
+  const itemsDiv = $('#items')
+  const num = $('#numItems')
+  const instructions = $('#instructions')
 
-  $("#btnGenerate")?.addEventListener("click", () => {
-    const n = Number(num?.value);
-    if (!n || n < 1) return;
-    clearElement(itemsDiv);
-    const vals = [];
+  $('#btnGenerate')?.addEventListener('click', () => {
+    const n = Number(num?.value)
+    if (!n || n < 1) return
+    clearElement(itemsDiv)
+    const vals = []
     for (let i = 0; i < n; i++) {
-      const v = randInt(0, 100);
-      vals.push(v);
-      const d = document.createElement("div");
-      d.className = "item";
-      d.textContent = String(v);
-      itemsDiv.appendChild(d);
+      const v = randInt(0, 100)
+      vals.push(v)
+      const d = document.createElement('div')
+      d.className = 'item'
+      d.textContent = String(v)
+      itemsDiv.appendChild(d)
     }
-    localStorage.setItem(KEY, JSON.stringify(vals));
-  });
+    localStorage.setItem(KEY, JSON.stringify(vals))
+  })
 
-  $("#btnToggleInstructions")?.addEventListener("click", () =>
+  $('#btnToggleInstructions')?.addEventListener('click', () =>
     toggleHidden(instructions)
-  );
+  )
 
-  $("#btnContinue")?.addEventListener("click", () => render(viewSummary));
+  $('#btnContinue')?.addEventListener('click', () => render(viewSummary))
 
-  $("#btnExit")?.addEventListener("click", () => {
-    localStorage.removeItem(KEY);
-    render(viewLogin);
-  });
+  $('#btnExit')?.addEventListener('click', () => {
+    localStorage.removeItem(KEY)
+    render(viewLogin)
+  })
+
+  $('#btnViewPepe')?.addEventListener('click', () => render(viewPepeTureatca))
+
+  $('#btnViewGary')?.addEventListener('click',()=>render(viewGaryEspinoza))
   
-  $("#btnViewPepe")?.addEventListener("click", () => render(viewPepeTureatca));
 }
