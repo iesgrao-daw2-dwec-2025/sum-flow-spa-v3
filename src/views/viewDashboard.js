@@ -14,6 +14,7 @@ import {
 import { viewSummary } from "./viewSummary.js";
 import { viewLogin } from "./viewLogin.js";
 import { viewPepeTureatca } from "./viewPepeTureatca.js";
+import { viewDavidMartinez } from "./viewDavidMartinez.js";
 
 // --- View definition ---
 export function viewDashboard() {
@@ -27,6 +28,10 @@ export function viewDashboard() {
 
     <div>
       <button id="btnViewPepe">Vista Pepe</button>
+    </div>
+
+    <div>
+      <button id="btnViewDavid">Vista David</button>
     </div>
 
     <p id="instructions" class="notice hidden">
@@ -72,4 +77,5 @@ export function viewDashboard() {
   });
   
   $("#btnViewPepe")?.addEventListener("click", () => render(viewPepeTureatca));
+  $("#btnViewDavid")?.addEventListener("click", () => render(viewDavidMartinez));
 }
