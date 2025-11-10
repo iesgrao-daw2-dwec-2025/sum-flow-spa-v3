@@ -14,6 +14,7 @@ import {
 import { viewSummary } from "./viewSummary.js";
 import { viewLogin } from "./viewLogin.js";
 import { viewPepeTureatca } from "./viewPepeTureatca.js";
+import { viewArnoldPozo } from "./viewArnoldPozo.js";
 
 // --- View definition ---
 export function viewDashboard() {
@@ -27,6 +28,7 @@ export function viewDashboard() {
 
     <div>
       <button id="btnViewPepe">Vista Pepe</button>
+      <button id="btnArnold">Vista Arnold</button>
     </div>
 
     <p id="instructions" class="notice hidden">
@@ -70,6 +72,8 @@ export function viewDashboard() {
     localStorage.removeItem(KEY);
     render(viewLogin);
   });
-  
+
   $("#btnViewPepe")?.addEventListener("click", () => render(viewPepeTureatca));
+
+  $("#btnArnold")?.addEventListener("click", () => render(viewArnoldPozo));
 }
