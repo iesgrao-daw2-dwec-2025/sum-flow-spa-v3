@@ -39,7 +39,7 @@ export function accionMarc() {
 
  
   document.getElementById("btnBack").addEventListener("click", async () => {
-    const { viewDashboard } = await import("./viewDashboard.js");
-    viewDashboard();
+    const { viewWelcome } = await import("./viewWelcome.js");
+    viewWelcome();
   });
 }
