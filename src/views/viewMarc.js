@@ -1,4 +1,5 @@
 import { html, template } from "../utils/globals";
+import { viewWelcome } from "./viewWelcome.js"; 
 
 // --- marc.js ---
 export function accionMarc() {
@@ -38,8 +39,7 @@ export function accionMarc() {
   });
 
  
-  document.getElementById("btnBack").addEventListener("click", async () => {
-    const { viewWelcome } = await import("./viewWelcome.js");
+ document.getElementById("btnBack").addEventListener("click", () => {
     viewWelcome();
-  });
+});
 }
