@@ -6,7 +6,7 @@ import { viewDashboard } from "./viewDashboard.js";
 import { viewLogin } from "./viewLogin.js";
 
 // --- View definition ---
-export function viewSummary() {
+export function  viewSummary() {
   const vals = JSON.parse(localStorage.getItem(KEY) || "[]");
   const sum = vals.reduce((a, b) => a + b, 0);
 
